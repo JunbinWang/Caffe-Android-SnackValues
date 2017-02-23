@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Even/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.6.0_20bf85b96eac4f29d7a2b2bba615e4ca7eb319c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Even/Desktop/SnackValues/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3a30d2e6e80426c378e4e9f130f15fa05180ca9b">
+        <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e0f137005208ede46138124fb433f859f7962b5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Even/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.11.0_41427cb3f7d09bd8a8a1ee54b8fcdde31ee33fd4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Even/Desktop/SnackValues/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4f00b4ad84086c761a58627f7286c177a952f54f">
+        <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d31847d10020528b8285edd9a3a0d95f02799913/classes.dex" />
+    </item>
+
+</items>
