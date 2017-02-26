@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="3a30d2e6e80426c378e4e9f130f15fa05180ca9b">
+        sha1="5a3d2025ff83b22576ae3fb26c07532bbfcb1d7a">
         <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e0f137005208ede46138124fb433f859f7962b5c/classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="4f00b4ad84086c761a58627f7286c177a952f54f">
+        sha1="1de542cd720b5378e6c54c49b8e5422f6ccc6f45">
         <dex dex="/Users/Even/Desktop/SnackValues/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d31847d10020528b8285edd9a3a0d95f02799913/classes.dex" />
     </item>
 

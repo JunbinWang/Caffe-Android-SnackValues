@@ -13,19 +13,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 /**
  * Created by Even on 2017/2/16.
@@ -35,7 +26,9 @@ public class ResultActivity extends ListActivity {
 
     private List<String> data = new ArrayList<String>();
     private Button goBack;
+    private Button correct;
     private OkHttpClient client = new OkHttpClient();
+    private String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,17 +60,17 @@ public class ResultActivity extends ListActivity {
             Intent bIntent = new Intent();
             bIntent.setClass(ResultActivity.this,MainActivity.class);
             startActivity(bIntent);
-        }
-    });
+        }});
 
-        new Thread(new Runnable(){
-            @Override
-            public void run() {
-                    doPost(filePath,"hello");
+        correct = (Button) findViewById(R.id.goCorrect);
+        correct.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+            Intent cIntent = new Intent();
+            cIntent.putExtra("imgPath",filePath);
+            cIntent.setClass(ResultActivity.this,CorrectActivity.class);
+            startActivity(cIntent);
             }
-        }).start();
-
-        //doPost(filePath,"hello");
+        });
     }
 
     @Override
@@ -93,30 +86,6 @@ public class ResultActivity extends ListActivity {
             new AlertDialog.Builder(this).setTitle("Help").setMessage("If you are unhappy with the result, you can click the 'Correct it' button to upload your image to our server and help us correct it.").setPositiveButton("GOT IT !",null).show();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private String doPost(String imagePath,String labelName) {
-
-        OkHttpClient client = new OkHttpClient();
-        File file = new File(imagePath);
-        MultipartBody.Builder builder = new MultipartBody.Builder().setType(MultipartBody.FORM);
-        MediaType type = MediaType.parse("image/jpeg");
-        builder.addFormDataPart("img",file.getName(), RequestBody.create(type,file));
-        builder.addFormDataPart("labelName",labelName);
-        MultipartBody requestBody = builder.build();
-        Request request = new Request.Builder().url("http://10.154.137.1:3000/upload").post(requestBody).build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                System.out.println("IMG:Fail!");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                System.out.println("IMG:SUCCESS!");
-            }
-        });
-        return "hello";
     }
 
 
