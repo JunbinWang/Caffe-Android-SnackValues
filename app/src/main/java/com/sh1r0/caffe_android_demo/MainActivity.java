@@ -1,13 +1,10 @@
 package com.sh1r0.caffe_android_demo;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -31,7 +28,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class MainActivity extends Activity implements CNNListener {
     private static final String LOG_TAG = "MainActivity";
     private static final int REQUEST_IMAGE_CAPTURE = 100;
@@ -43,8 +39,7 @@ public class MainActivity extends Activity implements CNNListener {
     private Button btnSelect;
     private Uri fileUri;
     private ProgressDialog dialog;
-    private Bitmap bmp;
-    private CaffeMobile caffeMobile;
+    private CaffeMobile caffeMobile = null;
     File sdcard = Environment.getExternalStorageDirectory();
     String modelDir = sdcard.getAbsolutePath() + "/caffe_mobile/new_snack_model";
     String modelProto = modelDir + "/deploy.prototxt";
@@ -80,13 +75,13 @@ public class MainActivity extends Activity implements CNNListener {
             }
         });
 
-        // TODO: implement a splash screen(?
-        caffeMobile = new CaffeMobile();
-        caffeMobile.setNumThreads(4);
-        caffeMobile.loadModel(modelProto, modelBinary);
-
-        float[] meanValues = {104, 117, 123};
-        caffeMobile.setMean(meanValues);
+        if(caffeMobile == null) {
+            caffeMobile = new CaffeMobile();
+            caffeMobile.setNumThreads(4);
+            caffeMobile.loadModel(modelProto, modelBinary);
+            float[] meanValues = {104, 117, 123};
+            caffeMobile.setMean(meanValues);
+        }
 
         AssetManager am = this.getAssets();
         try {
@@ -106,8 +101,6 @@ public class MainActivity extends Activity implements CNNListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if ((requestCode == REQUEST_IMAGE_CAPTURE || requestCode == REQUEST_IMAGE_SELECT) && resultCode == RESULT_OK) {
-
-
             if (requestCode == REQUEST_IMAGE_CAPTURE) {
                 imgPath = fileUri.getPath();
             } else {
@@ -120,13 +113,7 @@ public class MainActivity extends Activity implements CNNListener {
                 cursor.close();
             }
 
-            bmp = BitmapFactory.decodeFile(imgPath);
-            Log.d(LOG_TAG, imgPath);
-            Log.d(LOG_TAG, String.valueOf(bmp.getHeight()));
-            Log.d(LOG_TAG, String.valueOf(bmp.getWidth()));
-
             dialog = ProgressDialog.show(MainActivity.this, "Predicting...", "Wait for one sec...", true);
-
             CNNTask cnnTask = new CNNTask(MainActivity.this);
             cnnTask.execute(imgPath);
         } else {
@@ -145,7 +132,6 @@ public class MainActivity extends Activity implements CNNListener {
     private class CNNTask extends AsyncTask<String, Void, Integer> {
         private CNNListener listener;
         private long startTime;
-
         public CNNTask(CNNListener listener) {
             this.listener = listener;
         }

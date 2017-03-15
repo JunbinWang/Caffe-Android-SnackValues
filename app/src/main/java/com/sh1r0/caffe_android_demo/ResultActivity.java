@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,25 +29,33 @@ public class ResultActivity extends ListActivity {
     private List<String> data = new ArrayList<String>();
     private Button goBack;
     private Button correct;
+    Bitmap bmp;
     private OkHttpClient client = new OkHttpClient();
     private String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
         Intent intent = getIntent();
         final String filePath  = intent.getStringExtra("imgPath");
         String resultData = intent.getStringExtra("resultData");
         String[] results = resultData.split(" ");
-        ImageView resultView = (ImageView) findViewById(R.id.image_result);
-        //Bitmap bmp  = BitmapFactory.decodeFile("/data/data/com.sh1r0.caffe_android_demo/res/drawable/"+results[9]+"");
-        // resultView.setImageBitmap(bmp);
+
         ApplicationInfo appInfo = getApplicationInfo();
         int resID = getResources().getIdentifier(results[9], "drawable", appInfo.packageName);
+        ImageView resultView = (ImageView) findViewById(R.id.image_result);
         resultView.setImageResource(resID);
+        ImageView actualView = (ImageView) findViewById(R.id.image_actual);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 4;
+        bmp  = BitmapFactory.decodeFile(filePath,options);
+        actualView.setImageBitmap(bmp);
         TextView tvName = (TextView) findViewById(R.id.name);
         tvName.setText(results[0]);
+
         data.add("   Engry: " + results[1]+"kJ/"+results[2]+"kcal");
         data.add("   Fat: " + results[3]+"g, "+ "of which saturates: "+results[4]+"g");
         data.add("   Carbohydrates: " + results[5]+"g, "+ "of which sugars: "+results[6]+"g");
