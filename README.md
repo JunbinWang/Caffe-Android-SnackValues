@@ -12,7 +12,17 @@ ImageNet model for image classification
 To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
 ## Quick Look:
 
+Main Page:
 
+![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true "GitHub,Social Coding")
+
+Result Page:
+
+![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-32.png?raw=true "GitHub,Social Coding")
+
+Correct Page:
+
+![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-21-01.png?raw=true "GitHub,Social Coding")
 
 ## Quick Start
 
