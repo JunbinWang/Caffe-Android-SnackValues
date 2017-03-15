@@ -14,15 +14,15 @@ To run the application, you need to have the trained snack model and the deploy 
 
 Main Page:
 
-![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true "GitHub,Social Coding")
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true  " width = "200" height = "300" alt="图片名称" align=center />
 
 Result Page:
 
-![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-32.png?raw=true "GitHub,Social Coding")
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-32.png?raw=true " width = "200" height = "300" alt="图片名称" align=center />
 
 Correct Page:
 
-![GitHub](https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-21-01.png?raw=true "GitHub,Social Coding")
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-21-01.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
 
 ## Quick Start
 
