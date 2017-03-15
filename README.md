@@ -2,16 +2,24 @@ SnackValues
 ==================
 This is an Snack nutritional value prediction Applicaton built base on caffe-android-demo.
 
-The model is stored on : model directory, it can classify 15 type of snacks currently.
-Some test images are stored on test directory
+NodeServer Dictory: A simple server implemented by NodeJs, which can receive images and labels from mobile phone.
 
-An android caffe demo app exploiting caffe pre-trained ImageNet model for image classification
+test_images Dictory: some images which can be used to test the application
+
+An android caffe demo app exploiting caffe pre-trained 
+ImageNet model for image classification
+
+To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
+## Quick Look:
+
+
 
 ## Quick Start
 
 ### Basic
 
 If you want to have a try on this app, please follow the steps below to get the required stuff:
+
 ```shell
 
 # 1. push things to your device
