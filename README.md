@@ -1,20 +1,23 @@
 SnackValues
 ==================
-This is an Snack nutritional value prediction Applicaton built base on caffe-android-demo.
+This is an Snack nutritional value prediction Applicaton built on caffe-android-demo. It can predict snacks on mobile phone.
 
+To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
+
+Contact me if you want to know more details.
+Email: 39872463@qq.com
+
+
+### Some useful Directory:
 NodeServer Dictory: A simple server implemented by NodeJs, which can receive images and labels from mobile phone.
 
 test_images Dictory: some images which can be used to test the application
 
-An android caffe demo app exploiting caffe pre-trained 
-ImageNet model for image classification
-
-To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
 ## Quick Look:
 
 Main Page:
 
-<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true  " width = "200" height = "300" alt="图片名称" align=center />
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
 
 Result Page:
 
