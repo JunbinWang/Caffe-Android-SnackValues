@@ -1,5 +1,9 @@
 package com.sh1r0.caffe_android_demo;
 
+/**
+ * Created by Even on 2017/3/23.
+ */
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -10,8 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.File;
@@ -26,11 +30,13 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+
+
 /**
  * Created by Even on 2017/2/24.
  */
 
-public class CorrectActivity extends Activity {
+public class AddNewActivity extends Activity {
 
     private String result ="";
     Bitmap bmp;
@@ -39,7 +45,7 @@ public class CorrectActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_correct);
+        setContentView(R.layout.activity_add_new);
 
         Intent intent = getIntent();
         final String filePath = intent.getStringExtra("imgPath");
@@ -48,20 +54,24 @@ public class CorrectActivity extends Activity {
         options.inSampleSize = 4;
         bmp  = BitmapFactory.decodeFile(filePath,options);
         resultView.setImageBitmap(bmp);
-        final Button submit = (Button) findViewById(R.id.btnGo);
+        final Button submit = (Button) findViewById(R.id.correct_button);
         submit.setEnabled(true);
         submit.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Spinner spinner = (Spinner) findViewById(R.id.spinner);
-                final String content =spinner.getSelectedItem().toString();
-                new Thread(new Runnable(){
-                    @Override
-                    public void run() {
-                        doPost(filePath,content);
-                    }
-                }).start();
-                Toast.makeText(getApplicationContext(), "Upload Success.", Toast.LENGTH_SHORT).show();
-                submit.setEnabled(false);
+                EditText edit = (EditText) findViewById(R.id.input_user);
+                final String content =edit.getText().toString();
+                if(content.length() == 0){
+                    Toast.makeText(getApplicationContext(), "Input can not be empty", Toast.LENGTH_SHORT).show();
+                }else{
+                    new Thread(new Runnable(){
+                        @Override
+                        public void run() {
+                            doPost(filePath,content);
+                        }
+                    }).start();
+                    Toast.makeText(getApplicationContext(), "Upload Success.", Toast.LENGTH_SHORT).show();
+                    submit.setEnabled(false);
+                }
             }});
     }
 

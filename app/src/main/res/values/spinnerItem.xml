@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="months">
+        <item>Bueno-Original</item>
+        <item>Popchips-SeaSalt</item>
+        <item>Snickers</item>
+        <item>Starmix</item>
+        <item>Walkers-Salt&amp;Vinegar</item>
+        <item>Doritos-Cheese</item>
+        <item>Doritos-CHILLI</item>
+        <item>Doritos-Original</item>
+        <item>Popchips-Barbeque</item>
+        <item>Popchips-SeaSalt&amp;Vinegar</item>
+        <item>Popchips-SourCream&amp;Onion</item>
+        <item>Walkers-Chess&amp;Onion</item>
+        <item>Walkers-RoastChicken</item>
+        <item>Walkers-Salted</item>
+        <item>Bueno-White</item>
+    </string-array>
+
+</resources>

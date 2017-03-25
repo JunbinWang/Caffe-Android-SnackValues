@@ -27,6 +27,16 @@
 
         <activity android:name=".CorrectActivity" >
         </activity>
+
+        <activity android:name=".InputActivity" >
+        </activity>
+
+        <activity android:name=".SingleActivity">
+        </activity>
+
+        <activity android:name=".AddNewActivity">
+        </activity>
+
     </application>
 
 </manifest>

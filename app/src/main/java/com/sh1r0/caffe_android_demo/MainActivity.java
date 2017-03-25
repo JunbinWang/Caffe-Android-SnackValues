@@ -37,6 +37,7 @@ public class MainActivity extends Activity implements CNNListener {
     private static String[] IMAGENET_CLASSES;
     private Button btnCamera;
     private Button btnSelect;
+    private Button btnInput;
     private Uri fileUri;
     private ProgressDialog dialog;
     private CaffeMobile caffeMobile = null;
@@ -44,6 +45,7 @@ public class MainActivity extends Activity implements CNNListener {
     String modelDir = sdcard.getAbsolutePath() + "/caffe_mobile/new_snack_model";
     String modelProto = modelDir + "/deploy.prototxt";
     String modelBinary = modelDir + "/caffenet_train_iter_50000.caffemodel";
+    String meanFileDir = modelDir + "/train_mean.binaryproto";
 
     static {
         System.loadLibrary("caffe");
@@ -75,12 +77,20 @@ public class MainActivity extends Activity implements CNNListener {
             }
         });
 
+        btnInput = (Button) findViewById(R.id.btnInput);
+        btnInput.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, InputActivity.class);
+                startActivity(intent);
+            }
+        });
+
         if(caffeMobile == null) {
             caffeMobile = new CaffeMobile();
             caffeMobile.setNumThreads(4);
             caffeMobile.loadModel(modelProto, modelBinary);
-            float[] meanValues = {104, 117, 123};
-            caffeMobile.setMean(meanValues);
+            caffeMobile.setMean(meanFileDir);
         }
 
         AssetManager am = this.getAssets();

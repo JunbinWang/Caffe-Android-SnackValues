@@ -5,37 +5,59 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/b"
+    android:background="@drawable/bb"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="35dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/btnCamera"
-            android:background="#6CA6CD"
-            android:layout_width="130dp"
-            android:layout_height="42dp"
+            android:background="#3399ff"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:textColor="#F0FFF0"
             android:typeface="sans"
-            android:layout_marginLeft="20dp"
             android:text="Take Photos" />
 
         <Button
             android:id="@+id/btnSelect"
-            android:background="#6CA6CD"
-            android:layout_width="130dp"
-            android:layout_height="42dp"
+            android:background="#3399ff"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
             android:textColor="#F0FFF0"
+            android:textSize="17dp"
             android:typeface="sans"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
             android:text="Select Images" />
+
+        <Button
+            android:id="@+id/btnInput"
+            android:background="#3399ff"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:textColor="#F0FFF0"
+            android:textSize="17dp"
+            android:typeface="sans"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Input Snacks" />
+
     </LinearLayout>
+
 
 </LinearLayout>

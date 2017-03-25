@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,41 +17,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Even on 2017/2/16.
+ * Created by Even on 2017/3/16.
  */
 
-public class ResultActivity extends ListActivity {
+public class SingleActivity extends ListActivity {
 
     private List<String> data = new ArrayList<String>();
     private Button goBack;
-    private Button correct;
-    Bitmap bmp;
-    ImageView resultView;
-    ImageView actualView;
-
+    ImageView singleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_single_result);
         ApplicationInfo appInfo = getApplicationInfo();
 
         Intent intent = getIntent();
         String resultData = intent.getStringExtra("resultData");
         String[] results = resultData.split(" ");
 
-        resultView = (ImageView) findViewById(R.id.image_result);
-        actualView = (ImageView) findViewById(R.id.image_actual);
-
-        final String filePath = intent.getStringExtra("imgPath");
+        singleView = (ImageView) findViewById(R.id.image_single);
         int resID = getResources().getIdentifier(results[9], "drawable", appInfo.packageName);
-        resultView.setImageResource(resID);
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 4;
-        bmp = BitmapFactory.decodeFile(filePath, options);
-        actualView.setImageBitmap(bmp);
-
+        singleView.setImageResource(resID);
 
         TextView tvName = (TextView) findViewById(R.id.name);
         tvName.setText(results[0]);
@@ -66,23 +52,15 @@ public class ResultActivity extends ListActivity {
         data.add("");
         setListAdapter(new ArrayAdapter<String>(this,R.layout.my_listitem,data));
 
-        goBack = (Button) findViewById(R.id.goBack);
+        goBack = (Button) findViewById(R.id.goBackSingle);
         goBack.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-            Intent bIntent = new Intent();
-            bIntent.setClass(ResultActivity.this,MainActivity.class);
-            startActivity(bIntent);
-        }});
+                Intent bIntent = new Intent();
+                bIntent.setClass(SingleActivity.this,InputActivity.class);
+                startActivity(bIntent);
+                finish();
+            }});
 
-        correct = (Button) findViewById(R.id.goCorrect);
-        correct.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v) {
-            Intent cIntent = new Intent();
-            cIntent.putExtra("imgPath",filePath);
-            cIntent.setClass(ResultActivity.this,CorrectActivity.class);
-            startActivity(cIntent);
-            }
-        });
     }
 
     @Override
@@ -99,6 +77,4 @@ public class ResultActivity extends ListActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

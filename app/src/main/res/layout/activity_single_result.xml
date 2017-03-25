@@ -34,28 +34,19 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_height="130dp">
 
 
         <ImageView
-            android:id="@+id/image_actual"
+            android:id="@+id/image_single"
             android:layout_width="110dp"
             android:layout_height="130dp"
             android:scaleType="centerCrop"
-            android:layout_marginLeft="50dp"
-            android:src="@drawable/walkers_salted">
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/image_result"
-            android:layout_width="110dp"
-            android:layout_height="130dp"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/walkers_salted">
         </ImageView>
 
@@ -80,29 +71,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
         android:layout_marginTop="-8dp"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/goBack"
+            android:id="@+id/goBackSingle"
             android:background="#3399ff"
             android:layout_width="130dp"
             android:layout_height="42dp"
             android:textColor="#F0FFF0"
             android:typeface="sans"
-            android:layout_marginLeft="25dp"
+            android:layout_gravity="center_horizontal"
             android:text="Try Again" />
 
-        <Button
-            android:id="@+id/goCorrect"
-            android:background="#3399ff"
-            android:layout_width="130dp"
-            android:layout_height="42dp"
-            android:textColor="#F0FFF0"
-            android:typeface="sans"
-            android:layout_marginLeft="35dp"
-            android:text="Correct It" />
     </LinearLayout>
 
 
