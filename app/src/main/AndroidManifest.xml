@@ -15,26 +15,29 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.sh1r0.caffe_android_demo.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultActivity" >
+        <activity
+            android:name="com.sh1r0.caffe_android_demo.ResultActivity"
+            android:label="Snack Details" >
         </activity>
 
-        <activity android:name=".CorrectActivity" >
+        <activity android:name="com.sh1r0.caffe_android_demo.CorrectActivity"
+            android:label="Correct Result">
         </activity>
 
-        <activity android:name=".InputActivity" >
+        <activity
+            android:name="com.sh1r0.caffe_android_demo.SingleImageResult"
+            android:label="Snack Details" >>
         </activity>
 
-        <activity android:name=".SingleActivity">
-        </activity>
-
-        <activity android:name=".AddNewActivity">
+        <activity android:name="com.sh1r0.caffe_android_demo.AddNewActivity"
+            android:label="Add New Snack">
         </activity>
 
     </application>

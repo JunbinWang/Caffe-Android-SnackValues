@@ -1,11 +1,15 @@
 SnackValues
 ==================
-This is an Snack nutritional value prediction Applicaton built on caffe-android-demo. It can predict snacks on mobile phone.
+1. This is a Snack nutritional value prediction Application built on caffe-android-demo. It can predict snacks on the mobile phone. The application is designed based on Material Design Principle.
 
-To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
+2. The CNN(convolutional neural networks) model is trained by Caffe with 94.7% accuracy and it can classify 15 kinds of snacks.
 
-Contact me if you want to know more details.
-Email: 39872463@qq.com
+3. To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
+
+4. A simple NodeJs server is included in this project, it can receive images sent from the application.
+
+5. Contact me if you want to know more details.
+   Email: 39872463@qq.com
 
 
 ### Some useful Directory:
@@ -15,17 +19,30 @@ test_images Dictory: some images which can be used to test the application
 
 ## Quick Look:
 
-Main Page:
+Main Page 1:
 
-<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-21.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-29-22-50-05.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
+
+
+Main Page 2: After click Camera icon
+
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-29-22-50-22.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
+
+
+Main Page 3: After click FAB
+
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-29-22-50-11.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
+
+
+
 
 Result Page:
 
-<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-20-32.png?raw=true " width = "200" height = "300" alt="图片名称" align=center />
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-29-22-51-24.png?raw=true " width = "200" height = "300" alt="图片名称" align=center />
 
 Correct Page:
 
-<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-15-14-21-01.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
+<img src="https://github.com/JunbinWang/SnackValues/blob/master/Other%20Stuff/Original%20UI/Screenshot_2017-03-29-22-51-34.png?raw=true" width = "200" height = "300" alt="图片名称" align=center />
 
 ## Quick Start
 

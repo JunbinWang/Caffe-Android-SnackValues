@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#CCFFF5"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
@@ -16,7 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:layout_marginTop="20dp"
+            android:textColor="#424242"
+            android:layout_marginTop="15dp"
             android:layout_gravity="center"
             android:text="PopChips Original"
             />
@@ -24,86 +24,120 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:layout_margin="12dp"
+            android:textColor="#424242"
             android:layout_gravity="center"
             android:text="* Natritional Information (Per 100g)   "
             />
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="150dp">
+
+
+
+            <ImageView
+                android:id="@+id/image_user"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="140dp"
+                android:src="@drawable/walkers_salted">
+            </ImageView>
+
+
+
+        <ImageView
+            android:id="@+id/image_database"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/walkers_salted">
+        </ImageView>
+
+
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_height="130dp">
-
-
-        <ImageView
-            android:id="@+id/image_actual"
-            android:layout_width="110dp"
-            android:layout_height="130dp"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="50dp"
-            android:src="@drawable/walkers_salted">
-        </ImageView>
-
-        <ImageView
-            android:id="@+id/image_result"
-            android:layout_width="110dp"
-            android:layout_height="130dp"
-            android:scaleType="centerCrop"
-            android:layout_marginLeft="50dp"
-            android:src="@drawable/walkers_salted">
-        </ImageView>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ListView
-            android:id="@+id/android:list"
+
+        <EditText
+            android:id="@+id/et1"
             android:layout_width="fill_parent"
-            android:divider="#333333"
-            android:dividerHeight="2dp"
-            android:layout_marginTop="-5dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:focusable="false"
+            android:longClickable="false"
+            android:clickable="false"
+            android:backgroundTint="#BDBDBD"
+            android:text="Energy: 153kJ / 572kCal"
+            />
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:focusable="false"
+            android:textSize="15sp"
+            android:longClickable="false"
+            android:clickable="false"
+            android:backgroundTint="#BDBDBD"
+            android:text="Fat:12g ,of which saturates:13g "
+            />
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:focusable="false"
+            android:textSize="15sp"
+            android:longClickable="false"
+            android:clickable="false"
+            android:backgroundTint="#BDBDBD"
+            android:text="Carbojydrates: 14g ,of which sugars: 15g"
+            />
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:focusable="false"
+            android:longClickable="false"
+            android:textSize="15sp"
+            android:clickable="false"
+            android:backgroundTint="#BDBDBD"
+            android:text="Protein: 16g"
+            />
+
+        <EditText
+            android:id="@+id/et5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:focusable="false"
+            android:longClickable="false"
+            android:clickable="false"
+            android:backgroundTint="#BDBDBD"
+            android:text="Salt: 17g"
+            />
+
 
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="-8dp"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/goBack"
-            android:background="#3399ff"
-            android:layout_width="130dp"
-            android:layout_height="42dp"
-            android:textColor="#F0FFF0"
-            android:typeface="sans"
-            android:layout_marginLeft="25dp"
-            android:text="Try Again" />
-
-        <Button
-            android:id="@+id/goCorrect"
-            android:background="#3399ff"
-            android:layout_width="130dp"
-            android:layout_height="42dp"
-            android:textColor="#F0FFF0"
-            android:typeface="sans"
-            android:layout_marginLeft="35dp"
-            android:text="Correct It" />
-    </LinearLayout>
 
 
 </LinearLayout>

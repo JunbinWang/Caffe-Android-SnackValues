@@ -1,0 +1,15 @@
+0 Bueno-Original 2387 572 12 13 14 15 16 17 bueno
+1 Popchips-SeaSalt 666 123 321 123 33 55 89 89 popchips_seasalt
+2 Snickers 44 122 356 645 13 654 76 0 snickers
+3 Starmix 1 2 3 4 5 6 7 8 starmix
+4 Walkers-Salt&Vinegar 11 22 33 44 55 66 77 88 walkers_saltvnegar
+5 Doritos-Cheese 88 77 66 55 44 33 22 11 doritos_cheese
+6 Doritos-CHILLI 6 7 8 9 4 3 2 1 doritos_chill
+7 Doritos-Original 1 2 4 6 7 9 1 4 doritos_original
+8 Popchips-Barbeque 1 4 5 2 1 5 8 99 popchips_barbeque
+9 Popchips-SeaSalt&Vinegar 55 55 55 55 55 55 55 55 popchips_seasaltvinegar
+10 Popchips-SourCream&Onion 22 22 22 22 22 22 22 22 popchips_sourcream
+11 Walkers-Chess&Onion 11 11 11 11 11 11 11 11 walkers_chessonion
+12 Walkers-RoastChicken 33 33 33 33 33 33 33 33 walkers_roastchicken
+13 Walkers-Salted 11 11 11 11 11 11 11 11 walkers_salted
+14 Bueno-White 43 33 33 33 33 33 33 33 bueno_white

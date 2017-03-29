@@ -1,59 +1,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#CCFFF5"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_height="wrap_content">、
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:entries="@array/months"
-            android:textColor="#F0FFF0"
-            android:background="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginLeft="20dp"
-            android:typeface="sans"
-            android:prompt="@string/hints"
-            android:textSize="12dp"
-            android:spinnerMode="dropdown"
-            />
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="-8dp"
-            android:src="@drawable/triangle">
-        </ImageView>
-
-        <Button
-            android:id="@+id/btnGo"
-            android:background="#3399ff"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:textColor="#F0FFF0"
-            android:typeface="sans"
-            android:textSize="15dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="15dp"
-            android:text="Submit" />
-
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/image_user"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
         android:layout_gravity="center"
         android:src="@drawable/walkers_salted">
     </ImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_height="wrap_content">、
+
+        <android.support.v7.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:id="@+id/spinner"
+            android:entries="@array/months"
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:layout_height="35dp"
+            android:spinnerMode="dropdown"
+            />
+
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+    </LinearLayout>
 
 </LinearLayout>
