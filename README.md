@@ -4,7 +4,7 @@ SnackValues
 
 2. The CNN(convolutional neural networks) model is trained by Caffe with 94.7% accuracy and it can classify 15 kinds of snacks.
 
-3. To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c)
+3. To run the application, you need to have the trained snack model and the deploy file, which you can download it [Here](https://drive.google.com/open?id=0B8Z5vuz1VS_TWHpoRU4xZnhLT2c) (Just downliad the whole directory and then push to your mobile phone follow the following instructions.)
 
 4. A simple NodeJs server is included in this project, it can receive images sent from the application.
 
